@@ -5,7 +5,7 @@ from langchain_groq import ChatGroq
 def get_llm():
 
     return ChatGroq(
-        model="llama-3.1-8b-instant",
+        model="openai/gpt-oss-20b",
         temperature=0,
         api_key=os.getenv("GROQ_API_KEY"),
     )

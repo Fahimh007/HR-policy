@@ -15,27 +15,28 @@ def ask_hr_policy(question):
     )
 
     prompt = f"""
-You are an HR Policy Assistant.
+        You are an HR Policy Assistant.
 
-Use the following HR policy information to answer the user's question.
+        Use the following HR policy information to answer the user's question.
 
-HR POLICY CONTEXT:
+        HR POLICY CONTEXT:
 
-{context}
+        {context}
 
-USER QUESTION:
+        USER QUESTION:
 
-{question}
+        {question}
 
-Give a clear and concise answer.
-"""
+        Give a clear and concise answer.
+        """
 
     llm = get_llm()
 
     response = llm.invoke(prompt)
 
     sources = []
-
+    seen_pages = set()
+    
     for document in documents:
 
         page = document.metadata.get(
@@ -43,10 +44,16 @@ Give a clear and concise answer.
             0
         )
 
-        sources.append({
-            "document": "HR Policy Handbook",
-            "page": page + 1,
-        })
+        page_number = page + 1
+
+        if page_number not in seen_pages:
+
+            sources.append({
+                "document": "HR Policy Handbook",
+                "page": page_number,
+            })
+
+            seen_pages.add(page_number)
 
     return {
         "answer": response.content,
