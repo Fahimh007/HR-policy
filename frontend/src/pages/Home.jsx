@@ -5,10 +5,10 @@ import { IDCardLanyard } from "../components/ui/id-card-lanyard";
 
 function Home() {
   return (
-    <div>
+    <div className="min-h-screen"  >
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="mx-auto grid min-h-[720px] max-w-7xl items-center gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+      <section className="relative overflow-hidden bg-slate-50">
+        <div className="mx-auto grid min-h-[20px] max-w-7xl items-start gap-10 px-5 py-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:pt-10">
           
           {/* LEFT */}
           <div className="relative z-10 max-w-2xl">
@@ -16,8 +16,8 @@ function Home() {
               <Sparkles size={14} className="text-blue-600" />
               AI-powered HR policy search
             </div>
-
-            <h1 className="text-5xl font-black tracking-[-0.045em] text-slate-950 sm:text-6xl lg:text-7xl">
+    
+            <h1 className="text-5xl font-black tracking-[-0.045em] !text-slate-950 sm:text-6xl lg:text-7xl">
               Your HR policy,
               <span className="block text-blue-600">
                 one question away.
@@ -63,8 +63,8 @@ function Home() {
           </div>
 
           {/* RIGHT / LANYARD */}
-          <div className="relative flex min-h-[600px] items-center justify-center lg:min-h-[680px]">
-            <div className="absolute h-[420px] w-[420px] rounded-full bg-blue-500/10 blur-3xl" />
+          <div className="relative flex min-h-[600px] -translate-y-25 items-center justify-center lg:min-h-[680px]">
+            <div className="absolute h-[40px] w-[420px] rounded-full bg-blue-500/10 blur-3xl" />
 
             <IDCardLanyard
               name="HR POLICY AI"
@@ -78,7 +78,7 @@ function Home() {
               site="hr-policy.local/ask"
               showHint={true}
               anchorX="50%"
-              anchorY={5}
+              anchorY={0}
               zIndex={20}
             />
           </div>
@@ -123,8 +123,8 @@ function Home() {
         id="policies"
         className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28"
       >
-        <div className="max-w-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">
+        <div className="max-w-100%">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-600 lg:text-center">
             What's inside
           </p>
 

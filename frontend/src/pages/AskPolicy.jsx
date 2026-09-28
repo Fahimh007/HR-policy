@@ -55,20 +55,20 @@ function AskPolicy() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-72px)] px-5 py-12 sm:px-8 lg:py-20">
-      <div className="mx-auto max-w-5xl">
+    <div className="min-h-[calc(100vh-72px)] bg-slate-50 px-5 py-8 sm:px-8 lg:py-12">
+      <div className="mx-auto max-w-4xl">
         {/* HEADER */}
-        <div className="max-w-2xl">
+        <div className="max-w-100%">
           <Link
             to="/"
-            className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-slate-500 hover:text-slate-950"
+            className="flex min-h-11 w-fit items-center gap-2 text-left text-sm font-semibold text-slate-500 transition hover:text-slate-950"
           >
             <ArrowLeft size={16} />
             Back home
           </Link>
 
-          <div className="mt-8 flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+          <div className="mt-10 flex flex-col items-center gap-4 text-center sm:mt-12">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
               <Bot size={23} />
             </div>
 
@@ -77,13 +77,13 @@ function AskPolicy() {
                 HR Policy Assistant
               </p>
 
-              <h1 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+              <h1 className="!text-slate-950 text-3xl font-black tracking-tight sm:text-4xl">
                 Ask your policy question.
               </h1>
             </div>
           </div>
 
-          <p className="mt-5 leading-7 text-slate-500">
+          <p className="mt-5 max-w-2xl leading-7 text-slate-500">
             Ask a question in plain English. The assistant will search the
             HR Policy Handbook and return the relevant answer with source
             pages.

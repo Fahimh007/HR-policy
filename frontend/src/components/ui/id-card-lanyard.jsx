@@ -15,12 +15,15 @@ const CSS = `
   --idcl-font-mono:'JetBrains Mono','Consolas',monospace;
   --idcl-font-script:'Caveat',cursive;
   font-family:'Work Sans',system-ui,sans-serif;
+  position:absolute;
+  inset:0;
+  pointer-events:none;
 }
 .idcl-root *{ box-sizing:border-box; }
 
-/* full-viewport overlay: transparent, click-through except on the card itself */
+/* Hero-scoped overlay: transparent, click-through except on the card itself. */
 .idcl-stage{
-  position:fixed;
+  position:absolute;
   inset:0;
   z-index:var(--idcl-z, 60);
   pointer-events:none;

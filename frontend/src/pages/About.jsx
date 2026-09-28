@@ -35,12 +35,12 @@ function About() {
   return (
     <div className="px-5 py-16 sm:px-8 lg:py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="max-w-3xl">
+        <div className="max-w-100%">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">
             About the project
           </p>
 
-          <h1 className="mt-4 text-4xl font-black tracking-[-0.03em] text-slate-950 sm:text-6xl">
+          <h1 className="!text-slate-950 mt-4 text-4xl font-black tracking-[-0.03em] sm:text-6xl">
             A simple RAG assistant for company HR policies.
           </h1>
 
@@ -70,7 +70,7 @@ function About() {
                   </span>
                 </div>
 
-                <h2 className="mt-8 text-xl font-black text-slate-950">
+                <h2 className="!text-slate-950 mt-8 text-xl font-black">
                   {step.title}
                 </h2>
 
