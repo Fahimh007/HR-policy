@@ -4,9 +4,9 @@ An AI-powered **HR Policy Question Answering System** that lets users ask natura
 
 Built with **React, Django REST Framework, LangChain, ChromaDB, Hugging Face embeddings, and Groq**.
 
-## Architecture
+## Project Architecture
 
-![HR Policy RAG Project Architecture](./architecture.png)
+<img src="./architecture.png" alt="HR Policy RAG Project Architecture" width="100%" height="600">
 
 The request flow is:
 
