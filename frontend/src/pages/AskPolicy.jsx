@@ -55,7 +55,7 @@ function AskPolicy() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-72px)] bg-slate-50 px-5 py-8 sm:px-8 lg:py-12">
+    <div className="min-h-[calc(100vh-72px)] bg-slate-50 px-5 py-8 sm:px-8 lg:py-1">
       <div className="mx-auto max-w-4xl">
         {/* HEADER */}
         <div className="max-w-100%">
@@ -67,7 +67,7 @@ function AskPolicy() {
             Back home
           </Link>
 
-          <div className="mt-10 flex flex-col items-center gap-4 text-center sm:mt-12">
+          <div className="mt-5 flex flex-col items-center gap-4 text-center sm:mt-12">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
               <Bot size={23} />
             </div>
@@ -80,14 +80,15 @@ function AskPolicy() {
               <h1 className="!text-slate-950 text-3xl font-black tracking-tight sm:text-4xl">
                 Ask your policy question.
               </h1>
+              <p className="mx-auto max-w-2xl text-center leading-7 text-slate-500">
+                Ask a question in plain English. The assistant will search the
+                HR Policy Handbook and return the relevant answer with source
+                pages.
+              </p>
             </div>
           </div>
 
-          <p className="mt-5 max-w-2xl leading-7 text-slate-500">
-            Ask a question in plain English. The assistant will search the
-            HR Policy Handbook and return the relevant answer with source
-            pages.
-          </p>
+
         </div>
 
         {/* FORM */}
@@ -141,7 +142,7 @@ function AskPolicy() {
 
         {/* EXAMPLES */}
         {!answer && !loading && (
-          <section className="mt-10">
+          <section className="my-10">
             <p className="text-sm font-bold text-slate-950">
               Try one of these
             </p>
