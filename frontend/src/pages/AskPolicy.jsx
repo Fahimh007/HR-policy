@@ -33,7 +33,8 @@ function AskPolicy() {
         `${API_URL}/api/chat/`,
         {
           question: question.trim(),
-        }
+        },
+        { timeout: 120000 }
       );
 
       setAnswer(response.data);
@@ -41,7 +42,9 @@ function AskPolicy() {
       console.error(err);
 
       setError(
-        "Unable to connect to the HR Policy Assistant. Please make sure the Django backend is running."
+        err.code === "ECONNABORTED"
+          ? "The backend took too long to respond. Please try again in a moment."
+          : "Unable to connect to the HR Policy Assistant. Please make sure the Django backend is running."
       );
     } finally {
       setLoading(false);

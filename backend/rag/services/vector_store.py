@@ -1,4 +1,5 @@
 from pathlib import Path
+from functools import lru_cache
 
 from langchain_chroma import Chroma
 
@@ -12,6 +13,7 @@ CHROMA_DIR = BASE_DIR / "chroma_db"
 COLLECTION_NAME = "hr_policy"
 
 
+@lru_cache(maxsize=1)
 def get_vector_store():
     embeddings = get_embeddings()
 
