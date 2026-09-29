@@ -123,12 +123,12 @@ function Home() {
         id="policies"
         className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28"
       >
-        <div className="max-w-100%">
+        <div className="max-w-100% ">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-600 lg:text-center">
             What's inside
           </p>
 
-          <h2 className="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">
+          <h2 className="!text-slate-950 mt-3 text-3xl font-black tracking-tight sm:text-4xl">
             Everything you need to understand company policy.
           </h2>
 
@@ -151,7 +151,7 @@ function Home() {
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8">
         <div className="overflow-hidden rounded-[2rem] bg-slate-950 px-6 py-14 text-white sm:px-12 lg:px-16">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex flex-col items-center">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-400">
               Need an answer?
             </p>
@@ -160,7 +160,7 @@ function Home() {
               Stop searching. Start asking.
             </h2>
 
-            <p className="mt-4 max-w-xl leading-7 text-slate-400">
+            <p className="mt-4 max-w-xl leading-7 text-slate-300">
               Ask a natural-language question and receive an answer based
               on the HR Policy Handbook.
             </p>
