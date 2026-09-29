@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from urllib.parse import urlsplit
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,11 +33,21 @@ SECRET_KEY = os.getenv(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
-    if host.strip()
-]
+ALLOWED_HOSTS = []
+for configured_host in os.getenv(
+    'DJANGO_ALLOWED_HOSTS',
+    '127.0.0.1,localhost',
+).split(','):
+    configured_host = configured_host.strip()
+    if not configured_host:
+        continue
+
+    if '://' in configured_host:
+        configured_host = urlsplit(configured_host).netloc
+
+    configured_host = configured_host.split('/')[0].split(':')[0]
+    if configured_host:
+        ALLOWED_HOSTS.append(configured_host)
 
 
 # Application definition
