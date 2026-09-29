@@ -33,17 +33,15 @@ const steps = [
 
 function About() {
   return (
-    <div className="px-5 py-16 sm:px-8 lg:py-24">
-      <div className="mx-auto max-w-6xl">
+    <div className="px-5 py-16 sm:px-8 lg:py-8">
+      <div className="mx-auto max-w-3xl">
         <div className="max-w-100%">
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">
             About the project
           </p>
-
           <h1 className="!text-slate-950 mt-4 text-4xl font-black tracking-[-0.03em] sm:text-6xl">
             A simple RAG assistant for company HR policies.
           </h1>
-
           <p className="mt-6 text-lg leading-8 text-slate-500">
             Instead of manually searching a long HR handbook, employees can
             ask questions using natural language and receive answers based

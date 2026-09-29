@@ -110,7 +110,7 @@ function AskPolicy() {
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
             placeholder="Example: How many annual leaves can I take?"
-            rows={5}
+            rows={3}
             className="w-full resize-none rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4 text-base text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
           />
 
@@ -144,7 +144,16 @@ function AskPolicy() {
 
         {/* EXAMPLES */}
         {!answer && !loading && (
-          <section className="my-10">
+          <section className="my-5">
+            {/* ERROR */}
+              {error && (
+                <div
+                    role="alert"
+                    className="my-3 rounded-2xl border border-red-200 bg-red-50 p-2 text-sm leading-6 text-red-700"
+                >
+                    {error}
+                </div>
+              )}
             <p className="text-sm font-bold text-slate-950">
               Try one of these
             </p>
@@ -164,19 +173,11 @@ function AskPolicy() {
           </section>
         )}
 
-        {/* ERROR */}
-        {error && (
-          <div
-            role="alert"
-            className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm leading-6 text-red-700"
-          >
-            {error}
-          </div>
-        )}
+
 
         {/* ANSWER */}
         {answer && (
-          <section className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-950/5 sm:p-8">
+          <section className="mt-4 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-950/5 sm:p-8">
             <div className="flex items-start gap-4">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
                 <Bot size={19} />
