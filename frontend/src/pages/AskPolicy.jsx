@@ -9,6 +9,8 @@ import {
 import { Link } from "react-router-dom";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 function AskPolicy() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState(null);
@@ -28,7 +30,7 @@ function AskPolicy() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/chat/",
+        `${API_URL}/api/chat/`,
         {
           question: question.trim(),
         }
