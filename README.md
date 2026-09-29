@@ -6,7 +6,7 @@ Built with **React, Django REST Framework, LangChain, ChromaDB, Hugging Face emb
 
 ## Project Architecture
 
-<img src="./architecture.png" alt="HR Policy RAG Project Architecture" width="100%" height="600">
+<img src="./architecture.png" alt="HR Policy RAG Project Architecture" width="100%" height="610">
 
 The request flow is:
 
