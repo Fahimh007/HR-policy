@@ -7,4 +7,6 @@ def get_llm():
         model="openai/gpt-oss-20b",
         temperature=0,
         api_key=os.getenv("GROQ_API_KEY"),
+        timeout=30,
+        max_retries=0,
     )
