@@ -47,7 +47,7 @@ class Command(BaseCommand):
             f"Created {len(chunks)} chunks."
         )
 
-        vector_store = get_vector_store()
+        vector_store = get_vector_store(create_if_missing=True)
 
         vector_store.add_documents(chunks)
 

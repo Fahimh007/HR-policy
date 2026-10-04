@@ -10,8 +10,8 @@ COLLECTION_NAME = "hr_policy"
 
 
 @lru_cache(maxsize=1)
-def get_vector_store():
-    if not CHROMA_DIR.exists():
+def get_vector_store(create_if_missing=False):
+    if not create_if_missing and not CHROMA_DIR.exists():
         raise RuntimeError(
             f"Chroma index not found at {CHROMA_DIR}. "
             "Run `python manage.py ingest_policy` during deployment."
@@ -25,7 +25,7 @@ def get_vector_store():
         persist_directory=str(CHROMA_DIR),
     )
 
-    if vector_store._collection.count() == 0:
+    if not create_if_missing and vector_store._collection.count() == 0:
         raise RuntimeError(
             f"Chroma collection '{COLLECTION_NAME}' is empty. "
             "Run `python manage.py ingest_policy` during deployment."
