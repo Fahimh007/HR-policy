@@ -8,8 +8,10 @@ from .services.rag_pipeline import ask_hr_policy
 class ChatView(APIView):
 
     def post(self, request):
+        print("CHAT REQUEST RECEIVED", flush=True)
 
         question = request.data.get("question")
+        print("CHAT REQUEST PARSED", flush=True)
 
         if not question:
             return Response(
