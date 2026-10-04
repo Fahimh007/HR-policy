@@ -1,6 +1,5 @@
 import fitz
 
-
 def load_pdf(pdf_path):
     """
     Extract text from every page of a PDF.

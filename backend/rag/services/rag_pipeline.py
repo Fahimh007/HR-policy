@@ -3,7 +3,6 @@ from .llm import get_llm
 
 
 def ask_hr_policy(question):
-
     documents = get_relevant_documents(
         question,
         k=4
