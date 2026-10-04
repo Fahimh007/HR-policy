@@ -3,6 +3,8 @@ from .llm import get_llm
 
 
 def ask_hr_policy(question):
+    print("STEP 1: Starting RAG", flush=True)
+    
     documents = get_relevant_documents(
         question,
         k=4
@@ -29,9 +31,13 @@ def ask_hr_policy(question):
         Give a clear and concise answer.
         """
 
+    print("STEP 6: Calling Groq", flush=True)
+
     llm = get_llm()
 
     response = llm.invoke(prompt)
+
+    print("STEP 7: Groq response received", flush=True)
 
     sources = []
     seen_pages = set()
@@ -53,6 +59,8 @@ def ask_hr_policy(question):
             })
 
             seen_pages.add(page_number)
+
+    print("STEP 8: RAG completed", flush=True)
 
     return {
         "answer": response.content,
