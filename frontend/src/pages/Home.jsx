@@ -71,7 +71,7 @@ function Home() {
               role="Policy Assistant"
               brand="HR POLICY"
               brandTagline="AI Knowledge Assistant"
-              pillars={["Search", "Understand", "Answer"]}
+              pillars={["Search", "Answer"]}
               location="Company HQ"
               idNumber="HR-2026"
               validThru="12/2029"

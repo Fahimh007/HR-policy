@@ -56,7 +56,7 @@ const CSS = `
 
 .idcl-face{
   position:absolute; inset:0; border-radius:18px;
-  padding:14px 14px 12px;
+  padding:13px 14px 11px;
   display:flex; flex-direction:column;
   backface-visibility:hidden;
   box-shadow:
@@ -93,21 +93,21 @@ const CSS = `
 @keyframes idcl-foil{ to{ background-position:220% 0%; } }
 @media (prefers-reduced-motion: reduce){ .idcl-holo{ animation:none; } }
 
-.idcl-hole{ width:32px; height:9px; background:var(--idcl-card-ink); border-radius:5px; margin:0 auto 10px; flex-shrink:0; opacity:.85; }
+.idcl-hole{ width:32px; height:9px; background:var(--idcl-card-ink); border-radius:5px; margin:0 auto 8px; flex-shrink:0; opacity:.85; }
 
-.idcl-header{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:9px; }
-.idcl-brand{ display:flex; align-items:flex-start; gap:6px; }
-.idcl-brand-mark{ font-size:12px; color:var(--idcl-accent); line-height:1; margin-top:1px; }
-.idcl-brand-text{ display:flex; flex-direction:column; }
-.idcl-brand-text b{ font-family:var(--idcl-font-display); font-weight:800; font-size:11.5px; letter-spacing:.01em; color:var(--idcl-card-ink); line-height:1.2; }
-.idcl-brand-text small{ font-family:var(--idcl-font-mono); font-size:6.3px; letter-spacing:.09em; text-transform:uppercase; color:var(--idcl-card-soft); }
-.idcl-pillars{ display:flex; flex-direction:column; align-items:flex-end; gap:1px; }
-.idcl-pillars span{ font-family:var(--idcl-font-mono); font-size:7px; letter-spacing:.1em; text-transform:uppercase; color:var(--idcl-card-soft); }
+.idcl-header{ display:grid; grid-template-columns:minmax(0,1fr) 54px; align-items:start; column-gap:8px; margin-bottom:7px; }
+.idcl-brand{ display:flex; align-items:flex-start; gap:3px; min-width:0; }
+.idcl-brand-mark{ font-size:10px; color:var(--idcl-accent); line-height:1; margin-top:1px; }
+.idcl-brand-text{ display:flex; flex-direction:column; min-width:0; }
+.idcl-brand-text b{ font-family:var(--idcl-font-display); font-weight:100; font-size:10.5px; letter-spacing:.01em; color:var(--idcl-card-ink); line-height:1.2; white-space:nowrap; }
+.idcl-brand-text small{ font-family:var(--idcl-font-mono); font-size:6.4px; line-height:1.45; letter-spacing:.08em; text-transform:uppercase; color:var(--idcl-card-soft); white-space:normal; overflow-wrap:anywhere; }
+.idcl-pillars{ display:flex; flex-direction:column; align-items:flex-start; gap:1px; min-width:0; }
+.idcl-pillars span{ font-family:var(--idcl-font-mono); font-size:6.4px; letter-spacing:.08em; text-transform:uppercase; color:var(--idcl-card-soft); white-space:nowrap; }
 .idcl-pillars i{ width:16px; height:2px; background:var(--idcl-card-ink); margin-top:3px; }
 
 .idcl-photo{
-  position:relative; width:100%; height:100px; border-radius:10px;
-  background:#eae7de; overflow:hidden; margin-bottom:9px; flex-shrink:0;
+  position:relative; width:100%; height:92px; border-radius:10px;
+  background:#eae7de; overflow:hidden; margin-bottom:7px; flex-shrink:0;
   box-shadow:inset 0 0 0 1px rgba(0,0,0,.08), inset 0 2px 6px rgba(0,0,0,.12);
 }
 .idcl-photo svg{ width:100%; height:100%; display:block; }
@@ -119,23 +119,23 @@ const CSS = `
 }
 .idcl-verified svg{ width:11px; height:11px; }
 
-.idcl-name{ margin:0 0 2px; font-family:var(--idcl-font-display); font-weight:800; font-size:16px; color:var(--idcl-card-ink); letter-spacing:-.01em; }
-.idcl-role{ margin:0 0 7px; font-size:8.5px; color:var(--idcl-card-soft); font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+.idcl-name{ margin:0 0 1px; font-family:var(--idcl-font-display); font-weight:800; font-size:14px; color:var(--idcl-card-ink); letter-spacing:0; line-height:1.15; }
+.idcl-role{ margin:0 0 5px; font-size:7.6px; color:var(--idcl-card-soft); font-weight:600; letter-spacing:.07em; text-transform:uppercase; line-height:1.2; }
 
-.idcl-divider{ width:100%; height:1px; background:var(--idcl-card-line); margin-bottom:7px; }
+.idcl-divider{ width:100%; height:1px; background:var(--idcl-card-line); margin-bottom:5px; flex-shrink:0; }
 
-.idcl-idrow{ width:100%; display:flex; justify-content:space-between; align-items:flex-start; gap:6px; margin-bottom:10px; }
-.idcl-idrow-labels{ display:flex; flex-direction:column; gap:4px; font-family:var(--idcl-font-mono); min-width:0; }
-.idcl-idrow-labels div{ display:flex; gap:8px; align-items:baseline; }
-.idcl-idrow-labels span{ width:48px; flex-shrink:0; font-size:6.8px; letter-spacing:.05em; text-transform:uppercase; color:var(--idcl-card-soft); }
-.idcl-idrow-labels b{ min-width:0; font-size:8.5px; line-height:1.15; font-weight:600; color:var(--idcl-card-ink); overflow-wrap:anywhere; }
+.idcl-idrow{ width:100%; display:flex; justify-content:space-between; align-items:flex-start; gap:5px; margin-bottom:0; min-height:152px; }
+.idcl-idrow-labels{ display:flex; flex:1 1 auto; flex-direction:column; gap:3px; font-family:var(--idcl-font-mono); min-width:0; }
+.idcl-idrow-labels div{ display:grid; grid-template-columns:58px minmax(0,1fr); gap:44px; align-items:baseline; min-width:0; }
+.idcl-idrow-labels span{ width:auto; min-width:0; font-size:4px; letter-spacing:.02em; text-transform:uppercase; color:var(--idcl-card-soft); white-space:nowrap; }
+.idcl-idrow-labels b{ min-width:0; font-size:8px; line-height:1.15; font-weight:600; color:var(--idcl-card-ink); overflow-wrap:anywhere; }
 
 .idcl-footer{
-  width:100%; margin-top:8px; padding-top:8px; border-top:1px solid var(--idcl-card-line);
-  text-align:center; font-family:var(--idcl-font-mono); font-size:7.5px; letter-spacing:.12em; text-transform:uppercase;
+  width:100%; margin-top:auto; padding-top:6px; border-top:1px solid var(--idcl-card-line);
+  flex-shrink:0; text-align:center; font-family:var(--idcl-font-mono); font-size:6.8px; letter-spacing:.1em; text-transform:uppercase;
   color:var(--idcl-card-soft);
 }
-.idcl-footer i{ color:var(--idcl-card-line); font-style:normal; margin:0 5px; }
+.idcl-footer i{ color:var(--idcl-card-line); font-style:normal; margin:0 4px; }
 
 .idcl-stripe{ width:100%; height:30px; background:repeating-linear-gradient(45deg, #1b1d24, #1b1d24 6px, #26282f 6px, #26282f 12px); border-radius:3px; margin-bottom:12px; }
 .idcl-barcode{ display:flex; align-items:flex-end; gap:2px; height:32px; width:100%; background:#fff; border-radius:3px; padding:0 4px; margin-bottom:8px; overflow:hidden; }
@@ -147,7 +147,6 @@ const CSS = `
 .idcl-qr{ display:grid; grid-template-columns:repeat(9,1fr); gap:1px; width:58px; height:58px; background:#fff; padding:4px; border-radius:4px; flex-shrink:0; box-shadow:0 0 0 1px var(--idcl-card-line); }
 .idcl-qr i{ background:transparent; }
 .idcl-qr i.on{ background:#181a20; }
-.idcl-qr.idcl-small{ width:42px; height:42px; padding:3px; }
 
 .idcl-scan{ font-family:var(--idcl-font-mono); font-size:8.4px; color:var(--idcl-card-soft); line-height:1.5; padding-top:2px; text-align:left; }
 .idcl-scan b{ color:var(--idcl-card-ink); display:block; font-size:9px; margin-bottom:2px; letter-spacing:.03em; }
@@ -212,7 +211,6 @@ export function IDCardLanyard({
   const flipperRef = useRef(null);
   const barcodeRef = useRef(null);
   const qrBackRef = useRef(null);
-  const qrFrontRef = useRef(null);
   const [interacted, setInteracted] = useState(false);
 
   // load the display fonts once (safe to call from multiple instances)
@@ -235,8 +233,7 @@ export function IDCardLanyard({
     const flipper = flipperRef.current;
     const barcodeEl = barcodeRef.current;
     const qrBackEl = qrBackRef.current;
-    const qrFrontEl = qrFrontRef.current;
-    if (!scene || !canvas || !rail || !card || !flipper || !barcodeEl || !qrBackEl || !qrFrontEl) return;
+    if (!scene || !canvas || !rail || !card || !flipper || !barcodeEl || !qrBackEl) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
@@ -263,7 +260,6 @@ export function IDCardLanyard({
       }
     }
     buildQR(qrBackEl, 928371);
-    buildQR(qrFrontEl, 574123);
 
     // anchor is a full-viewport point — resolve anchorX ("50%", "120px", or
     // "calc(100% - 130px)" to hang the card from the right edge) against the window
@@ -655,7 +651,6 @@ export function IDCardLanyard({
                     <b>{validThru}</b>
                   </div>
                 </div>
-                <div className="idcl-qr idcl-small" ref={qrFrontRef} />
               </div>
 
               <div className="idcl-footer">
