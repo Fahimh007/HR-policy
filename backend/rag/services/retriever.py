@@ -8,7 +8,6 @@ def get_relevant_documents(question, k=4):
     print("STEP 3: Vector store loaded", flush=True)
 
     print("STEP 4: Starting retrieval", flush=True)
-
     documents = vector_store.similarity_search(
         question,
         k=k

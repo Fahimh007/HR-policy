@@ -1,7 +1,5 @@
 from pathlib import Path
-
 from django.core.management.base import BaseCommand
-
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 

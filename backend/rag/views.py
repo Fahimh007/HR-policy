@@ -4,9 +4,7 @@ from rest_framework import status
 
 from .services.rag_pipeline import ask_hr_policy
 
-
 class ChatView(APIView):
-
     def post(self, request):
         print("CHAT REQUEST RECEIVED", flush=True)
 
@@ -20,18 +18,15 @@ class ChatView(APIView):
                 },
                 status=status.HTTP_400_BAD_REQUEST
             )
-
+        
         try:
-
             result = ask_hr_policy(question)
-
             return Response(
                 result,
                 status=status.HTTP_200_OK
             )
-
+        
         except Exception as e:
-
             return Response(
                 {
                     "error": str(e)

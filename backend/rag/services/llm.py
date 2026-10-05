@@ -8,5 +8,4 @@ def get_llm():
         temperature=0,
         api_key=os.getenv("GROQ_API_KEY"),
         timeout=30,
-        max_retries=0,
     )

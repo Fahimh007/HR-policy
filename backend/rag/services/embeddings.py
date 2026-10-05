@@ -11,7 +11,6 @@ EMBEDDING_CACHE_DIR = BASE_DIR / ".cache" / "huggingface"
 def get_embeddings():
     print("EMBEDDINGS: Loading model via Hugging Face Inference API", flush=True)
 
-    # Note: Requires HUGGINGFACEHUB_API_TOKEN in your environment variables
     embeddings = HuggingFaceEndpointEmbeddings(
         model="sentence-transformers/all-MiniLM-L6-v2",
         task="feature-extraction",
