@@ -74,7 +74,7 @@ function AskPolicy() {
           </Link>
 
           <div className="mt-5 flex flex-col items-center gap-4 text-center sm:mt-12">
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-600/20">
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/50">
               <Bot size={23} />
             </div>
 

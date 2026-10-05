@@ -45,7 +45,7 @@ function PolicyCard({ policy }) {
 
   return (
     <article className="group rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-100 text-slate-900 transition group-hover:bg-blue-600 group-hover:text-white">
+      <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-100 text-slate-900 transition group-hover:bg-blue-600 group-hover:text-white shadow-lg shadow-black-500/50">
         <Icon size={20} />
       </div>
 

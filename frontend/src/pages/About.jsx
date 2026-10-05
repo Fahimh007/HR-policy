@@ -59,7 +59,7 @@ function About() {
                 className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm"
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-500/50 hover:bg-blue-600 hover:text-white">
                     <Icon size={21} />
                   </div>
 
