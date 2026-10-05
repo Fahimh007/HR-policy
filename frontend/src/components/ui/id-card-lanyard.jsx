@@ -56,7 +56,7 @@ const CSS = `
 
 .idcl-face{
   position:absolute; inset:0; border-radius:18px;
-  padding:16px 16px 14px;
+  padding:14px 14px 12px;
   display:flex; flex-direction:column;
   backface-visibility:hidden;
   box-shadow:
@@ -95,7 +95,7 @@ const CSS = `
 
 .idcl-hole{ width:32px; height:9px; background:var(--idcl-card-ink); border-radius:5px; margin:0 auto 10px; flex-shrink:0; opacity:.85; }
 
-.idcl-header{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; }
+.idcl-header{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:9px; }
 .idcl-brand{ display:flex; align-items:flex-start; gap:6px; }
 .idcl-brand-mark{ font-size:12px; color:var(--idcl-accent); line-height:1; margin-top:1px; }
 .idcl-brand-text{ display:flex; flex-direction:column; }
@@ -106,8 +106,8 @@ const CSS = `
 .idcl-pillars i{ width:16px; height:2px; background:var(--idcl-card-ink); margin-top:3px; }
 
 .idcl-photo{
-  position:relative; width:100%; height:112px; border-radius:10px;
-  background:#eae7de; overflow:hidden; margin-bottom:12px; flex-shrink:0;
+  position:relative; width:100%; height:100px; border-radius:10px;
+  background:#eae7de; overflow:hidden; margin-bottom:9px; flex-shrink:0;
   box-shadow:inset 0 0 0 1px rgba(0,0,0,.08), inset 0 2px 6px rgba(0,0,0,.12);
 }
 .idcl-photo svg{ width:100%; height:100%; display:block; }
@@ -119,20 +119,20 @@ const CSS = `
 }
 .idcl-verified svg{ width:11px; height:11px; }
 
-.idcl-name{ margin:0 0 2px; font-family:var(--idcl-font-display); font-weight:800; font-size:18px; color:var(--idcl-card-ink); letter-spacing:-.01em; }
-.idcl-role{ margin:0 0 10px; font-size:10px; color:var(--idcl-card-soft); font-weight:600; letter-spacing:.09em; text-transform:uppercase; }
+.idcl-name{ margin:0 0 2px; font-family:var(--idcl-font-display); font-weight:800; font-size:16px; color:var(--idcl-card-ink); letter-spacing:-.01em; }
+.idcl-role{ margin:0 0 7px; font-size:8.5px; color:var(--idcl-card-soft); font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
 
-.idcl-divider{ width:100%; height:1px; background:var(--idcl-card-line); margin-bottom:10px; }
+.idcl-divider{ width:100%; height:1px; background:var(--idcl-card-line); margin-bottom:7px; }
 
-.idcl-idrow{ width:100%; display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:16px; }
-.idcl-idrow-labels{ display:flex; flex-direction:column; gap:5px; font-family:var(--idcl-font-mono); }
+.idcl-idrow{ width:100%; display:flex; justify-content:space-between; align-items:flex-start; gap:6px; margin-bottom:10px; }
+.idcl-idrow-labels{ display:flex; flex-direction:column; gap:4px; font-family:var(--idcl-font-mono); min-width:0; }
 .idcl-idrow-labels div{ display:flex; gap:8px; align-items:baseline; }
-.idcl-idrow-labels span{ width:56px; flex-shrink:0; font-size:7.6px; letter-spacing:.06em; text-transform:uppercase; color:var(--idcl-card-soft); }
-.idcl-idrow-labels b{ font-size:9.5px; font-weight:600; color:var(--idcl-card-ink); }
+.idcl-idrow-labels span{ width:48px; flex-shrink:0; font-size:6.8px; letter-spacing:.05em; text-transform:uppercase; color:var(--idcl-card-soft); }
+.idcl-idrow-labels b{ min-width:0; font-size:8.5px; line-height:1.15; font-weight:600; color:var(--idcl-card-ink); overflow-wrap:anywhere; }
 
 .idcl-footer{
-  width:100%; margin-top:12px; padding-top:10px; border-top:1px solid var(--idcl-card-line);
-  text-align:center; font-family:var(--idcl-font-mono); font-size:8.5px; letter-spacing:.14em; text-transform:uppercase;
+  width:100%; margin-top:8px; padding-top:8px; border-top:1px solid var(--idcl-card-line);
+  text-align:center; font-family:var(--idcl-font-mono); font-size:7.5px; letter-spacing:.12em; text-transform:uppercase;
   color:var(--idcl-card-soft);
 }
 .idcl-footer i{ color:var(--idcl-card-line); font-style:normal; margin:0 5px; }
@@ -147,7 +147,7 @@ const CSS = `
 .idcl-qr{ display:grid; grid-template-columns:repeat(9,1fr); gap:1px; width:58px; height:58px; background:#fff; padding:4px; border-radius:4px; flex-shrink:0; box-shadow:0 0 0 1px var(--idcl-card-line); }
 .idcl-qr i{ background:transparent; }
 .idcl-qr i.on{ background:#181a20; }
-.idcl-qr.idcl-small{ width:46px; height:46px; padding:3px; }
+.idcl-qr.idcl-small{ width:42px; height:42px; padding:3px; }
 
 .idcl-scan{ font-family:var(--idcl-font-mono); font-size:8.4px; color:var(--idcl-card-soft); line-height:1.5; padding-top:2px; text-align:left; }
 .idcl-scan b{ color:var(--idcl-card-ink); display:block; font-size:9px; margin-bottom:2px; letter-spacing:.03em; }
