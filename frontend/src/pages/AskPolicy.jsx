@@ -31,10 +31,8 @@ function AskPolicy() {
     try {
       const response = await axios.post(
         `${API_URL}/api/chat/`,
-        {
-          question: question.trim(),
-        },
-        { timeout: 120000 }
+        {question: question.trim(),},
+        {timeout: 120000}
       );
 
       setAnswer(response.data);
@@ -93,8 +91,6 @@ function AskPolicy() {
               </p>
             </div>
           </div>
-
-
         </div>
 
         {/* FORM */}
@@ -138,8 +134,10 @@ function AskPolicy() {
                 </>
               ) : (
                 <>
-                  <Send size={17} />
-                  Ask Policy
+                  <Send 
+                    size={17} 
+                  />
+                    Ask Policy
                 </>
               )}
             </button>
@@ -186,12 +184,10 @@ function AskPolicy() {
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
                 <Bot size={19} />
               </div>
-
               <div className="min-w-0">
                 <p className="text-sm font-bold text-slate-950">
                   HR Policy Assistant
                 </p>
-
                 <div className="mt-4 whitespace-pre-wrap text-[15px] leading-7 text-slate-600">
                   {answer.answer}
                 </div>

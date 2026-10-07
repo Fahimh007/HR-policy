@@ -62,7 +62,7 @@ function About() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-lg shadow-500/50 hover:bg-blue-600 hover:text-white">
                     <Icon size={21} />
                   </div>
-
+  
                   <span className="text-sm font-black text-slate-300">
                     {step.number}
                   </span>
